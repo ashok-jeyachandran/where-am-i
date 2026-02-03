@@ -38,6 +38,12 @@
     },
     {
       "path": "./apps/track-my-progress"
+    },
+    {
+      "path": "./libs/track-my-progress/feature-cricket"
+    },
+    {
+      "path": "./libs/track-my-progress/feature-dashboard"
     }
   ]
 }

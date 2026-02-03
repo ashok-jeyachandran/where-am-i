@@ -1,27 +1,22 @@
 // Uncomment this line to use CSS modules
 // import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
 
+import { lazy } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
+
+const Dashboard = lazy(() => import('@org/feature-dashboard').then(m => ({default: m.OrgFeatureDashboard})));
+const Cricket = lazy(() => import('@org/feature-cricket').then((m => ({default: m.OrgFeatureCricket}))));
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="@org/track-my-progress" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
       <div role="navigation">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link to="/page-2">Page 2</Link>
+            <Link to="/cricket">My Cricket</Link>
           </li>
         </ul>
       </div>
@@ -29,18 +24,13 @@ export function App() {
         <Route
           path="/"
           element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
+            <Dashboard />
           }
         />
         <Route
-          path="/page-2"
+          path="/cricket"
           element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
+           <Cricket />
           }
         />
       </Routes>
