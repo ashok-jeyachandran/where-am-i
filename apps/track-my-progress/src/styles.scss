@@ -1,0 +1,7 @@
+// 2. Now, import Bootstrap after the overrides
+@use 'bootstrap/scss/bootstrap';
+
+// 3. Apply Tamil font globally to body when lang="ta"
+html[lang='ta'] body {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+}

@@ -7,7 +7,7 @@ import {
   LoadingSpinner,
   ErrorMessage,
 } from '@org/shop-shared-ui';
-import styles from './product-list.module.css';
+import styles from './product-list.module.scss';
 
 export function ProductList() {
   const navigate = useNavigate();

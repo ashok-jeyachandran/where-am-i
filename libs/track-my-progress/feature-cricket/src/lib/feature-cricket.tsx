@@ -1,4 +1,4 @@
-import styles from './feature-cricket.module.css';
+import styles from './feature-cricket.module.scss';
 
 export function OrgFeatureCricket() {
   return (

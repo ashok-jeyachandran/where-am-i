@@ -1,4 +1,4 @@
-import styles from './feature-dashboard.module.css';
+import styles from './feature-dashboard.module.scss';
 
 export function OrgFeatureDashboard() {
   return (

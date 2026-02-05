@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { LoadingSpinner } from '@org/shop-shared-ui';
-import './app.css';
+import './app.scss';
 
 // Lazy load feature components
 const ProductList = lazy(() => import('@org/shop-feature-products').then(m => ({ default: m.ProductList })));

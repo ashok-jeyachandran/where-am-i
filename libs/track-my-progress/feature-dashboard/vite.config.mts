@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-export default defineConfig(() => ({
+export default defineConfig(( mode ) => ({
   root: __dirname,
   cacheDir:
     '../../../node_modules/.vite/libs/track-my-progress/feature-dashboard',
@@ -21,4 +21,18 @@ export default defineConfig(() => ({
       provider: 'v8' as const,
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        quietDeps: true,
+        silenceDeprecations: ['color-functions']
+      },
+      sass: {
+        api: 'modern-compiler',
+        quietDeps: true,
+        silenceDeprecations: ['color-functions']
+      },
+    }
+  }
 }));

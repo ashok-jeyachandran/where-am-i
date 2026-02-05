@@ -1,5 +1,5 @@
 import { Product } from '@org/models';
-import styles from './product-card.module.css';
+import styles from './product-card.module.scss';
 
 interface ProductCardProps {
   product: Product;

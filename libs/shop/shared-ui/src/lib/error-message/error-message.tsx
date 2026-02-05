@@ -1,4 +1,4 @@
-import styles from './error-message.module.css';
+import styles from './error-message.module.scss';
 
 interface ErrorMessageProps {
   message?: string;

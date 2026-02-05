@@ -1,6 +1,6 @@
 import { Product } from '@org/models';
 import { ProductCard } from '../product-card/product-card';
-import styles from './product-grid.module.css';
+import styles from './product-grid.module.scss';
 
 interface ProductGridProps {
   products: Product[];
