@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(() => ({
+export default defineConfig((mode) => ({
   root: import.meta.dirname,
   cacheDir: '../../node_modules/.vite/apps/track-my-progress',
   server: {
@@ -38,4 +38,12 @@ export default defineConfig(() => ({
       provider: 'v8' as const,
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+        silenceDeprecations: ['color-functions']
+      }
+    }
+  }
 }));
