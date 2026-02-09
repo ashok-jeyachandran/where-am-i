@@ -1,3 +1,15 @@
 {
-    "welcome": "Hello, Welcome to the world of improvement. Track Your progress here."
+    "welcome": "Hello, Welcome to the world of improvement. Track Your progress here.",
+    "language": {
+        "en": "English",
+        "ta": "Tamil"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Welcome to Dashboard"
+    },
+    "cricket": {
+        "title": "Cricket",
+        "welcome": "Welcome to cricket."
+    }
 }

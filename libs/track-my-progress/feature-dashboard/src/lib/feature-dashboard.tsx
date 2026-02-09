@@ -1,9 +1,12 @@
-import styles from './feature-dashboard.module.scss';
+import './feature-dashboard.scss';
+import { useTranslation } from 'react-i18next';
 
 export function OrgFeatureDashboard() {
+  const { t } = useTranslation();
+
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to OrgFeatureDashboard!</h1>
+    <div className="dashboard">
+      <h1>{t('dashboard.welcome')}</h1>
     </div>
   );
 }
