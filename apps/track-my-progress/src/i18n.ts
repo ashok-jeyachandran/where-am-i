@@ -15,7 +15,8 @@ i18next
         },
         backend: {
             loadPath: '/assets/locales/{{lng}}/{{ns}}.json'
-        }
+        },
+        keySeparator: '.'
     })
 
 export default i18next;

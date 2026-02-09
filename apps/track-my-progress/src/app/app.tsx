@@ -1,11 +1,8 @@
-// Uncomment this line to use CSS modules
-// import styles from './app.module.scss';
-
+import './app.scss';
+import logo from '../assets/progress-tracking-line-icon-vector.jpg';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
-// const Dashboard = lazy(() => import('@org/feature-dashboard').then(m => ({default: m.OrgFeatureDashboard})));
-// const Cricket = lazy(() => import('@org/feature-cricket').then((m => ({default: m.OrgFeatureCricket}))));
+import { NavLink, Outlet } from 'react-router-dom';
 
 export function App() {
   const { t, i18n } = useTranslation();
@@ -19,13 +16,35 @@ export function App() {
   }
 
   return (
-    <div className='d-flex flex-column align-items-center'>
-      <select className='align-self-end' value={i18n.language} onChange={handleLanguageChange}>
-        <option value="en">English</option>
-        <option value="ta">Tamil</option>
-      </select>
-      <h1>{t('welcome')}</h1>
-    </div>
+    <>
+      <header className='header'>
+        <div className='header_top-line'>
+          <img src={logo} alt="Track my progress"/>
+
+          <select className='align-self-end' value={i18n.language} onChange={handleLanguageChange}>
+            <option value="en">{t('language.en')}</option>
+            <option value="ta">{t('language.ta')}</option>
+          </select>
+        </div>
+
+        <nav className='header_navigation'>
+          <ul>
+            <li>
+              <NavLink to="/dashboard">{t('dashboard.title')}</NavLink>
+            </li>
+            <li>
+              <NavLink to="/cricket">{t('cricket.title')}</NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+       <div className='container'>
+          <main>
+            <Outlet />
+          </main>
+        </div>
+      <footer></footer>
+    </>
   );
 }
 

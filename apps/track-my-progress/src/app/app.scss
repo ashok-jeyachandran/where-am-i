@@ -1,0 +1,45 @@
+/* Your styles goes here. */
+.header {
+    padding: 25px;
+    background-color: #007f7f;
+    color: #FFF;
+
+    &_top-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+
+        img {
+            height: 36px;
+            width: 36px;
+        }
+        select {
+            width: 100px;
+            height: 30px;
+        }
+    }
+
+    &_navigation {
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            gap: 10px;
+            margin-bottom: 0;
+
+            a {
+                color: #FFF;
+                text-decoration: none;
+
+                &:hover {
+                    color: #ffcce0
+                }
+                &.active {
+                    color:  #FFF;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
